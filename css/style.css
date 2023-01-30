@@ -73,7 +73,7 @@ img {
   padding-right: 15px;
   margin: 0 auto;
 
-  outline: 1px solid tomato;
+  /* outline: 1px solid tomato; */
 }
 
 .title-txt {
@@ -117,7 +117,7 @@ img {
 
 /* header */
 .section-header {
-  border-bottom: 1px solid #e7e9fc;
+  border-bottom: 1px solid var(--footer-txt-cl);
 }
 .logo-link {
   font-weight: 800;
@@ -315,4 +315,18 @@ img {
   padding: 12px 24px;
   border: 1px solid var(--footer-txt-cl);
   border-radius: 4px;
+}
+
+.portfolio-footer-card {
+  padding: 32px 16px;
+  border-left: 1px solid var(--footer-txt-cl);
+  border-right: 1px solid var(--footer-txt-cl);
+  border-bottom: 1px solid var(--footer-txt-cl);
+}
+.portfolio-footer-card .title-txt {
+  margin-bottom: 8px;
+}
+
+.portfolio-item {
+  background: var(--primary-bg-cl);
 }
