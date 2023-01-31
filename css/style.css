@@ -22,19 +22,12 @@
   --primary-font: Roboto, sans-serif;
   --secondary-font: Raleway, sans-serif;
 
-  /* Card */
+  /* Card SET */
   --ident: 24px;
   --items: 3;
 }
-/* Загальні стилі */
-body {
-  font-family: var(--primary-font);
-  letter-spacing: 0.02em;
-  font-size: 16px;
-  color: var(--primary-txt-cl);
-}
+/*************** Загальні стилі ****************/
 /* RESET */
-
 h1,
 h2,
 h3,
@@ -45,6 +38,13 @@ li {
   margin: 0;
   padding: 0;
 }
+body {
+  font-family: var(--primary-font);
+  letter-spacing: 0.02em;
+  font-size: 16px;
+  color: var(--primary-txt-cl);
+  background-color: var(--primary-bg-cl);
+}
 
 img {
   display: block;
@@ -52,6 +52,22 @@ img {
   height: auto;
 }
 
+.link {
+  text-decoration: none;
+}
+.list {
+  list-style: none;
+}
+
+.container {
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  /* outline: 1px solid tomato; */
+}
+/*  Card set */
 .card-set {
   display: flex;
   flex-wrap: wrap;
@@ -60,20 +76,19 @@ img {
 .items-set {
   flex-basis: calc((100%- var(--ident) * (var(--items)-1)) / var(--items));
 }
-.link {
-  text-decoration: none;
-}
-.list {
-  list-style: none;
-}
-/* GLOBAL template */
-.container {
-  width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
 
-  /* outline: 1px solid tomato; */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .title-txt {
@@ -88,19 +103,7 @@ img {
 .center-txt {
   text-align: center;
 }
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
 
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
 .btn {
   font-family: var(--primary-font);
   font-weight: 500;
@@ -113,9 +116,9 @@ img {
   border: none;
 }
 
-/* ===== INDEX===== */
+/********************** PAGE INDEX ********************/
 
-/* header */
+/*------ header -------*/
 .section-header {
   border-bottom: 1px solid var(--footer-txt-cl);
 }
@@ -179,7 +182,7 @@ img {
   color: var(--pressed-txt-cl);
 }
 
-/************  hero ***************/
+/*------------- hero -------------*/
 .section-hero {
   padding-top: 188px;
   padding-bottom: 188px;
@@ -216,7 +219,8 @@ img {
 .hero-btn:focus {
   background-color: var(--pressed-bg-cl);
 }
-/*  ADVANTAGS */
+
+/*---------------  ADVANTAGS -----------------*/
 .section-advantags {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -230,7 +234,7 @@ img {
   margin-bottom: 8px;
 }
 
-/* Styles for PRODUCT */
+/*----------------- Styles for PRODUCT ----------------*/
 .section-product {
   padding-bottom: 120px;
 }
@@ -246,7 +250,7 @@ img {
   text-transform: capitalize;
 }
 
-/* Our Team  */
+/*------------------- Our Team  ----------------*/
 .section-team {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -265,14 +269,13 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 .team-item-footer {
-  padding-bottom: 32px;
-  padding-top: 32px;
+  padding: 32px 16px;
 }
 .team-name {
   margin-bottom: 8px;
 }
 
-/* Footer */
+/*----------------- Footer ---------------------*/
 .section-footer {
   padding: 100px 0;
 }
@@ -288,7 +291,7 @@ img {
   max-width: 264px;
 }
 
-/* PORTFOLIO */
+/*---------------- PORTFOLIO -------------------*/
 
 .btn.filter {
   color: var(--btn-filter-txt-cl);
@@ -329,4 +332,8 @@ img {
 
 .portfolio-item {
   background: var(--primary-bg-cl);
+}
+
+.card-set.portfolio-list {
+  row-gap: 48px;
 }
